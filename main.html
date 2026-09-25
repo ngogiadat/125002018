@@ -1,15 +1,198 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cửa Hàng Máy Tính & Phụ Kiện</title>
+  <link rel="stylesheet" href="main.css">
 </head>
-
 <body>
-    <p>hello bro</p>
-    <header>hello</header>
-</body>
 
+  <input type="checkbox" id="theme-switch">
+
+  <div class="app-container">
+
+    <header>
+      <div class="nav-wrapper">
+        <ul class="nav-menu">
+          <li><a href="#trang-chu">Trang chủ</a></li>
+          <li><a href="#laptop">Laptop</a></li>
+          <li><a href="#phu-kien">Phụ kiện</a></li>
+          <li><a href="#khuyen-mai">Khuyến mãi</a></li>
+          <li><a href="#lien-he">Liên hệ</a></li>
+        </ul>
+        
+        <label for="theme-switch" class="theme-toggle-btn">
+          <span class="icon-light-text">🌙 DarkMode</span>
+          <span class="icon-dark-text">☀️ LightMode</span>
+        </label>
+      </div>
+    </header>
+
+    <section class="banner" id="trang-chu">
+      <div class="container">
+        <h1>CỬA HÀNG MÁY TÍNH & PHỤ KIỆN TECHZONE</h1>
+        <p id="khuyen-mai">Giảm giá lên đến 30% cho tất cả Laptop Gaming & Phụ kiện công nghệ trong tháng này!</p>
+        <a href="#" class="btn-buy-now">Mua ngay</a>
+      </div>
+    </section>
+
+    <div class="container">
+      
+      <h2 class="section-title" id="laptop">Sản Phẩm Nổi Bật</h2>
+      <div class="product-grid">
+
+        <div class="product-card">
+          <img src="imgs/MSI_Cyborg15.webp">
+          <h3 class="product-title">Laptop MSI Cyborg 15 A13UC-2082VN</h3>
+          <p class="product-price">28.990.000 VNĐ</p>
+          <p class="product-specs">I7-13620H | 16GB | 512GB PCIE | VGA 4GB RTX3050 | 15.6 FHD 144HZ | WIN11 | ĐEN | BALO</p>
+          <button class="btn-add-cart">Thêm vào giỏ</button>
+        </div>
+
+        <div class="product-card">
+          <img src="imgs/Laptop_Acer.webp">
+          <h3 class="product-title">Laptop Acer Aspire Go 15 AI AG15-52P-52WT</h3>
+          <p class="product-price">22.599.000 VNĐ</p>
+          <p class="product-specs">U5-115U | 16GB | 512GB PCIE | 15.6 FHD | WIN11 | BẠC</p>
+          <button class="btn-add-cart">Thêm vào giỏ</button>
+        </div>
+
+        <div class="product-card">
+          <img src="imgs/ASUS_GAMING_V16.webp">
+          <h3 class="product-title">Laptop ASUS Gaming V16 V3607VJ-RP071W</h3>
+          <p class="product-price">26.500.000 VNĐ</p>
+          <p class="product-specs">CORE 5-210H | 16GB | 512GB PCIE | RTX 6GB RTX3050 | 16.0 WUXGA 144ZHZ | WIN11 | ĐEN</p>
+          <button class="btn-add-cart">Thêm vào giỏ</button>
+        </div>
+
+        <div class="product-card" id="phu-kien">
+          <img src="imgs/Pin_du_phong.webp">
+          <h3 class="product-title">Pin sạc dự phòng Baseus Enerfill FC11</h3>
+          <p class="product-price">1.250.000 VNĐ</p>
+          <p class="product-specs">10.000mAh 22.5W | màn hình tích hợp cáp C+L</p>
+          <button class="btn-add-cart">Thêm vào giỏ</button>
+        </div>
+
+        <div class="product-card">
+          <img src="imgs/Ban_Phim.webp">
+          <h3 class="product-title">Bàn phím cơ có dây AULA F75 trắng</h3>
+          <p class="product-price">2.100.000 VNĐ</p>
+          <p class="product-specs">80 phím | WINXP/WIN7/WIN8/WIN10 | Có dây | LED RGB | 20 hiệu ứng ánh sáng | 16.8 triệu màu</p>
+          <button class="btn-add-cart">Thêm vào giỏ</button>
+        </div>
+
+        <div class="product-card">
+          <img src="imgs/Tai_nghe.webp">
+          <h3 class="product-title">Tai nghe Bluetooth True Wireless JBL Wave Beam</h3>
+          <p class="product-price">1.850.000 VNĐ</p>
+          <p class="product-specs">Dài 2.35 cm - Rộng 2.186 cm - Cao 3.099 cm | JBL Deep Bass Sound | Chạm cảm ứng hoặc App</p>
+          <button class="btn-add-cart">Thêm vào giỏ</button>
+        </div>
+
+      </div>
+
+      <section class="order-section" id="dat-hang">
+        <h2 class="section-title">Form Đặt Hàng</h2>
+        <form action="#" method="post">
+
+          <div class="form-group">
+            <label for="fullname" class="field-label">Họ và tên:</label>
+            <input type="text" id="fullname" name="fullname" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email" class="field-label">Email:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="phone" class="field-label">Điện thoại:</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+
+          <div class="form-group">
+            <label for="address" class="field-label">Địa chỉ giao hàng:</label>
+            <input type="text" id="address" name="address" required>
+          </div>
+
+          <div class="form-group">
+            <label for="delivery-date" class="field-label">Ngày muốn nhận:</label>
+            <input type="date" id="delivery-date" name="delivery-date" required>
+          </div>
+
+          <div class="form-group">
+            <label class="field-label">Hình thức thanh toán:</label>
+            <div class="radio-group">
+              <label><input type="radio" name="payment" value="tien-mat" checked> Tiền mặt</label>
+              <label><input type="radio" name="payment" value="chuyen-khoan"> Chuyển khoản</label>
+              <label><input type="radio" name="payment" value="tra-gop"> Trả góp</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="product-select" class="field-label">Sản phẩm đặt mua:</label>
+            <select id="product-select" name="product" required>
+              <option value="">-- Chọn sản phẩm --</option>
+              <option value="laptop-gaming">Laptop Gaming Pro X15</option>
+              <option value="ultrabook-slim">Ultrabook Slim 14</option>
+              <option value="macbook-air">MacBook Air M2</option>
+              <option value="chuot-wireless">Chuột Wireless Pro Gaming</option>
+              <option value="ban-phim-co">Bàn Phím Cơ Custom RGB</option>
+              <option value="tai-nghe-71">Tai Nghe Surround 7.1</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="field-label">Dịch vụ kèm theo:</label>
+            <div class="checkbox-group">
+              <label><input type="checkbox" name="services[]" value="cai-dat"> Cài đặt phần mềm miễn phí</label>
+              <label><input type="checkbox" name="services[]" value="bao-hanh-vang"> Gói bảo hành vàng 24 tháng</label>
+              <label><input type="checkbox" name="services[]" value="giao-hang-nhanh"> Giao hàng hỏa tốc trong 2 giờ</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="notes" class="field-label">Ghi chú giao hàng:</label>
+            <textarea id="notes" name="notes" rows="4" placeholder="Nhập yêu cầu hoặc ghi chú giao hàng..."></textarea>
+          </div>
+
+          <div class="form-buttons">
+            <button type="submit" class="btn-submit">Đặt hàng</button>
+            <button type="reset" class="btn-reset">Nhập lại</button>
+          </div>
+
+        </form>
+      </section>
+
+    </div>
+
+    <!-- 5. Footer -->
+    <footer id="lien-he">
+      <div class="footer-container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Địa Chỉ Cửa Hàng</h3>
+            <p>123 Đường Công Nghệ, Quận Ninh Kiều, TP. Cần Thơ</p>
+          </div>
+          <div class="footer-section">
+            <h3>Chính Sách Bảo Hành</h3>
+            <p>Bảo hành chính hãng 12 - 24 tháng.</p>
+            <p>1 đổi 1 trong 30 ngày nếu có lỗi từ nhà sản xuất.</p>
+          </div>
+          <div class="footer-section">
+            <h3>Hotline Hỗ Trợ</h3>
+            <p>Tư vấn mua hàng: 1800 1234</p>
+            <p>Hỗ trợ kỹ thuật: 1800 5678</p>
+          </div>
+        </div>
+        <div class="copyright">
+          © 2026 TechZone. Tất cả quyền được bảo lưu.
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+</body>
 </html>

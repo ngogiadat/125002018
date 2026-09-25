@@ -1,0 +1,338 @@
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    }
+
+    :root {
+      --bg-color: #3d546c;
+      --text-color: #1e293b;
+      --card-bg: #ffffff;
+      --header-text: #ffffff;
+      --primary-color: #0a3289;
+      --primary-hover: #1d4ed8;
+      --border-color: #cbd5e1;
+      --input-bg: #ffffff;
+      --menu-bg-color:#233d58;
+      --footer-text-color:#8fa0bc;
+      --button-form-bg-color: rgb(32, 39, 91);
+      --khuyenmai-color:#ef3e3e;
+    }
+
+    #theme-switch {
+      display: none;
+    }
+
+    #theme-switch:checked ~ .app-container {
+      --bg-color: #233660;
+      --text-color: #f8f9fa;
+      --card-bg: #1e293b;
+      --header-text: #f8f9fa;
+      --primary-color: #708cba;
+      --primary-hover: #60a5fa;
+      --border-color: #334155;
+      --input-bg: #1e293b;
+      --menu-bg-color:#001125;
+      --footer-text-color:#5773a0;
+      --button-form-bg-color: rgb(131, 138, 193);
+      --khuyenmai-color:#e29191;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
+
+    .container {
+      max-width: 1200px;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header {
+      background-color: var(--menu-bg-color);
+      color: var(--header-text);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-wrapper {
+      display: flex;
+      justify-content: space-between;
+      background-color: var(--menu-bg-color);
+      color: var(--header-text);
+      align-items: center;
+      padding: 15px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #3b82f6;
+    }
+
+    .nav-menu {
+      display: flex;
+      background-color: var(--menu-bg-color);
+      list-style: none;
+      gap: 25px;
+    }
+
+    .nav-menu a {
+      color: var(--header-text);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .nav-menu a:hover {
+      color: var(--primary-color);
+    }
+
+    /* Label thiết kế dạng nút toggle Dark/Light */
+    .theme-toggle-btn {
+      padding: 8px 16px;
+      background-color: var(--primary-color);
+      color: #ffffff;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: bold;
+      user-select: none;
+    }
+
+    .theme-toggle-btn:hover {
+      background-color: var(--primary-hover);
+    }
+
+    .icon-dark-text { display: none; }
+    .icon-light-text { display: inline; }
+
+    #theme-switch:checked ~ .app-container .icon-dark-text { display: inline; }
+    #theme-switch:checked ~ .app-container .icon-light-text { display: none; }
+
+    /* Banner */
+    .banner {
+      background-color: var(--bg-color);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+      margin-bottom: 40px;
+    }
+
+    .banner h1 {
+      font-size: 36px;
+      margin-bottom: 12px;
+    }
+
+    .banner p {
+      font-size: 18px;
+      margin-bottom: 24px;
+      color:var(--khuyenmai-color);
+    }
+
+    .btn-buy-now {
+      display: inline-block;
+      padding: 12px 30px;
+      background-color: #ef4444;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 6px;
+    }
+
+    .btn-buy-now:hover {
+      background-color: #dc2626;
+    }
+
+    /* Danh sách 6 sản phẩm */
+    .section-title {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 26px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-bottom: 50px;
+    }
+
+    .product-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      color: var(--text-color);
+      border-radius: 8px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 15px;
+    }
+
+    .product-title {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .product-price {
+      color: #ef4444;
+      font-weight: bold;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .product-specs {
+      font-size: 13px;
+      margin-bottom: 15px;
+      line-height: 1.5;
+    }
+
+    .btn-add-cart {
+      width: 100%;
+      padding: 10px;
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .btn-add-cart:hover {
+      background-color: var(--primary-hover);
+    }
+
+    /* Form Đặt hàng */
+    .order-section {
+      background-color: var(--card-bg);
+      color: var(--text-color);
+      border: 1px solid var(--border-color);
+      padding: 30px;
+      border-radius: 8px;
+      margin-bottom: 50px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label.field-label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="tel"],
+    .form-group input[type="date"],
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      background-color: var(--input-bg);
+      color: var(--text-color);
+    }
+
+    .radio-group, .checkbox-group {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .radio-group label, .checkbox-group label {
+      font-weight: normal;
+      cursor: pointer;
+    }
+
+    .form-buttons {
+      display: flex;
+      color: var(--button-form-bg-color);
+      gap: 15px;
+    }
+
+    .btn-submit {
+      padding: 12px 30px;
+      background-color: var(--button-form-bg-color);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .btn-submit:hover {
+      background-color: #16a34a;
+    }
+
+    .btn-reset {
+      padding: 12px 30px;
+      background-color: #64748b;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .btn-reset:hover {
+      background-color: #475569;
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--menu-bg-color);
+      color: #94a3b8;
+      padding: 40px 0 20px 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+
+    .footer-section h3 {
+      color: white;
+      color: var(--footer-text-color);
+      margin-bottom: 12px;
+    }
+
+    .copyright {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid #334155;
+      font-size: 14px;
+    }
+
+    .app-container {
+        background-color: var(--bg-color);
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      background-color: var(--menu-bg-color);
+      color: var(--footer-text-color);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
